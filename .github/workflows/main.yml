@@ -1,0 +1,19 @@
+name: Automatic Fork Sync
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight
+  workflow_dispatch: # Allows you to trigger it manually
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync upstream changes
+        uses: tgymnich/fork-sync-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main         # The branch in your fork you want to update
+          head: main         # The branch in the original repo you are pulling from
+          owner: HKUSTDial
+          repo: Supervisor-Skills
