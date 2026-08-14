@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Sync upstream changes
-        uses: tgymnich/fork-sync-action@v2
+        uses: tgymnich/fork-sync@v2.0.10
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: main         # The branch in your fork you want to update
