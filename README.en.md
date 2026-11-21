@@ -18,7 +18,7 @@ English · [中文](README.md)
 
 ## 📰 News
 
-> - **[2026-11-05]** 🎓 **[Ducktor](https://github.com/yinwu01/Ducktor)** and **[DeepSeek-Ducktor](https://github.com/yinwu01/DeepSeek-Ducktor)**, the next chapter of the Supervisor series, are officially released! 🚀 In the wave of vibe research, the agent moves your research forward while Ducktor explains the research judgment behind each step, closing the knowledge loop for researchers 🔁 so that you and your agent learn and evolve together 🌱.
+> - **[2026-11-05]** 🚀 **The complete agent-native form of Supervisor-Skills is here!** **[Ducktor](https://github.com/HKUSTDial/Ducktor)** (Claude Code / Codex) and **[DeepSeek-Ducktor](https://github.com/HKUSTDial/DeepSeek-Ducktor)** are released! Built on Supervisor-Skills, they go from "calling one Skill by hand" to a native plugin that stays with you the whole way: type `/duck on` once, and the agent not only works for you with a seasoned advisor's research methods, but also explains the research judgment behind each step. The agent gets more useful, and you are no longer "the one who only clicks to confirm".
 > - **[2026-09-21]** 🤝 In partnership with **Baidu**, Supervisor-Skills is now embedded in the **Kuku AI (库库AI)** platform as an expert, presented as "[**Prof. Luo, Computer Science Research Expert**](https://kuku.baidu.com/#/workbench/expert)".
 > - **[2026-07-15]** 🤝 In partnership with **Doubao**, Supervisor-Skills has been officially deployed as the core research skill suite of **Doubao Office Mode**, powering its "**Research Evaluation**" and "**Academic Writing**" capabilities and bringing this project's research methodology to a massive user base.
 > - **[2026-07-10]** 🚀 **v2.1**: three new skills, `paper-writer` (evidence-gated paper drafting), `paper-polish` (meaning-preserving polishing), and `deep-research` (survey-grade literature investigation); `intro-drafter` now outputs prose; paradigm-aware routing lands in the evaluation and review skills. See the [CHANGELOG](CHANGELOG.md).
@@ -191,6 +191,43 @@ Paste the following prompt into your AI assistant (Claude Code, Cursor, Codex, a
 ```
 Help me install Supervisor-Skills from https://github.com/HKUSTDial/Supervisor-Skills with Skills.
 ```
+
+For an agent-native setup, install **[Ducktor](https://github.com/HKUSTDial/Ducktor)**. It builds on Supervisor-Skills as a native plugin for Claude Code and Codex. After you type `/duck on` once in your project, Ducktor explains the research judgment behind each step while the agent works. On DeepSeek Harness, install **[DeepSeek-Ducktor](https://github.com/HKUSTDial/DeepSeek-Ducktor)**. Send the matching prompt to your agent:
+
+```
+Install the Ducktor plugin for me: https://github.com/HKUSTDial/Ducktor
+Follow the steps in i18n/INSTALL.en.md in that repository, then tell me how to start.
+```
+
+```
+Install the DeepSeek-Ducktor plugin for me: https://github.com/HKUSTDial/DeepSeek-Ducktor
+Follow the steps in the "Install and quick start" section of docs/README.en.md in that repository, then tell me how to start.
+```
+
+## 🔗 Related open-source projects
+
+Beyond research ideas and paper writing, the projects below bring these methods into your agent, and help you analyze data and present your results.
+
+### 🎓 Ducktor and DeepSeek-Ducktor: an agent-native research mentor
+
+Ducktor is the next project in the Supervisor series. While the agent moves your research forward, Ducktor takes each step apart for you: what judgment the step made, what the common practice is and how experienced researchers think about it, and under what conditions the judgment does not hold. Decisions and the principles you can take away are kept in the project's `.duck/` folder; type `/duck-learn` to look back on a stage of work, and `/duck-why` to ask why a step was done that way.
+
+- [Ducktor](https://github.com/HKUSTDial/Ducktor): a plugin for Claude Code and Codex (in Codex the commands look like `$duck:duck-learn`); Cursor, Gemini CLI and similar tools can use it by copying its AGENTS.md.
+- [DeepSeek-Ducktor](https://github.com/HKUSTDial/DeepSeek-Ducktor): a native plugin for DeepSeek Harness, with the same commands and rules as Ducktor.
+
+### 📊 DataMagic: animated charts and data stories
+
+When you prepare a group meeting, a paper talk or a project demo, pick a case from DataMagic's recipe library of animated charts, and use the matching `datamagic` Skill to turn trends, rankings and comparisons into animations and data stories.
+
+Pick a recipe, copy its implementation prompt, and hand it to a coding agent such as Claude Code, Cursor or Codex; then swap in your own data and adjust the result.
+
+[GitHub repository](https://github.com/HKUSTDial/DataMagic)
+
+### 🔍 DeepEye: a data analysis agent
+
+Given files, databases and other data sources, DeepEye plans and runs multi-step analysis workflows and produces analysis reports, interactive dashboards and data videos. You can watch the execution and step in to adjust it.
+
+[GitHub repository](https://github.com/HKUSTDial/DeepEye)
 
 ## Contributing & feedback
 
